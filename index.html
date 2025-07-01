@@ -32,11 +32,12 @@
   </section>
 
   <section id="about" class="section">
-    <h2>About Teresa</h2>
+    <h2 class="split">About Teresa</h2>
     <div class="about-wrapper">
         <div class="img-holder">
             <img src="./assets/images/teresa.jpg" alt="">
 <div class="bg1"></div>
+<div class="bg2"></div>
 
         </div>
         <div class="desc-holder">
@@ -58,7 +59,7 @@ Ginger 😊</p>
   </section>
 
   <section id="services" class="section">
-    <h2>Services</h2>
+    <h2 class="split">Services</h2>
     <div class="service-cards">
       <div class="card">
         <img src="./assets/icons/filtering.png" alt="" class="icon">
@@ -89,7 +90,7 @@ you with any holiday or special occasion.</p>
   </section>
 
   <section id="gallery" class="section">
-    <h2>Before & After Gallery</h2>
+    <h2 class="split">Before & After Gallery</h2>
     
     
   <div class="gallery-wrap">
@@ -109,7 +110,7 @@ you with any holiday or special occasion.</p>
   </section>
 
   <section id="testimonials" class="section">
-    <h2>Testimonials</h2>
+    <h2 class="split">Testimonials</h2>
     <div class="gallery-wrap">
      <div class="swiper mySwiper">
     <div class="swiper-wrapper">
@@ -150,7 +151,7 @@ you with any holiday or special occasion.</p>
   </section>
 
   <section id="contact" class="section">
-    <h2>Contact & Booking</h2>
+    <h2 class="split">Contact & Booking</h2>
     <div class="contact-wrap">
 <form id="contactForm" method="POST" action="">
       <input type="text" placeholder="Your Full Name" required>
@@ -179,7 +180,11 @@ well.</p>
   <footer>
     <p>&copy; <span class="year"></span> The O.G. Consulting</p>
   </footer>
-<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollTrigger.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/SplitText.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script src="./scripts/script.js"></script>
   <script>
       var swiper = new Swiper(".mySwiper", {
       navigation: {
