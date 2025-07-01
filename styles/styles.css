@@ -4,6 +4,10 @@
   padding: 0;
   box-sizing: border-box;
 }
+@font-face {
+  font-family: 'vibes';
+  src: url(../fonts/great-vibes/GreatVibes-Regular.ttf);
+}
 html{
     scroll-behavior: smooth;
 }
@@ -17,6 +21,8 @@ body {
 }
 h1,h2{
     font-family: "Edu NSW ACT Cursive", cursive;
+    font-family: 'vibes',cursive;
+    /* font-size: 5rem; */
 }
 a {
   text-decoration: none;
@@ -83,7 +89,7 @@ a {
   padding: 6rem 2rem 4rem;
   width: 100%;
   max-width: 100%!important;
-  height: 85vh;
+  height: 88vh;
   position: relative;
   margin: auto;
   display: flex;
@@ -103,6 +109,13 @@ a {
     z-index: 0;
     filter:brightness(.6);
 }
+.hero::after{
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: #e571411f;
+}
 .hero-content{
   width: 100%;
     height: 100%;
@@ -115,8 +128,9 @@ a {
     align-items: center;
 }
 .hero-content h1 {
-  font-size: 2.5rem;
+  font-size: 5rem;
   margin-bottom: 1rem;
+  font-weight: 100;
 }
 
 .hero-content p {
@@ -148,10 +162,34 @@ form button{
 
 .btn:hover,form button:hover {
     background: #D96D2B;
+    background-color: #0e777d;
   color:white;
   cursor: pointer;
 }
+/* swiper */
+.swiper {
+      width: 100%;
+      height: 100%;
+    }
 
+    .swiper-slide {
+      text-align: center;
+      font-size: 18px;
+      /* background: #444; */
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .swiper-slide img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    .swiper-button-next,.swiper-button-prev{
+      color:teal!important;
+    }
 /* Sections */
 .section {
   padding:2rem;
@@ -161,9 +199,9 @@ form button{
 }
 
 .section h2 {
-  font-size: 2rem;
+  font-size: 3rem;
   margin: 1rem auto;
-  /* color: #e76e99; */
+  font-weight: 100;
   color:#D96D2C;
 }
 
@@ -184,6 +222,7 @@ form button{
     background-color: #ccc;
     position: relative;
     margin: auto;
+    object-fit: cover;
     /* left:-100px; */
     
 }
@@ -279,17 +318,17 @@ form button{
 }
 blockquote {
   background: #ffe3ed;
-  background: #EDD7C7;
-  padding: 1.25rem;
-  border:1px solid #D96D2B;
-  border-left: 5px solid #D96D2B;
-  margin-bottom: 1.5rem;
-  border-radius: 8px;
-  font-style: italic;
-  width: 85%;
-  margin: auto;
-  font-size: 1.5rem;
-  box-shadow: 3px 3px .5rem #444;
+    background: #EDD7C7;
+    padding: 1.25rem;
+    border: 2px solid #D96D2B;
+    border-left: 5px solid #D96D2B;
+    margin-bottom: 1.5rem;
+    border-radius: 8px;
+    font-style: italic;
+    width: 100%;
+    margin: auto;
+    font-size: 1.2rem;
+    
 }
 
 /* Contact */
