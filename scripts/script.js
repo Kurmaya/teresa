@@ -1,6 +1,23 @@
+const navItem= document.querySelectorAll(".nav-links li a");
+for(let i=0;i<navItem.length;i++){
+  if(navItem[i].href===location.href){
+    navItem[i].classList.add('active');
+  }
+}
+const close = document.querySelector('.close');
+
+close.addEventListener('click',()=>{
+  close.classList.toggle('active');
+  document.querySelector('.nav-links').classList.toggle('active');
+})
+
 const cards = document.querySelectorAll('.card');
 const targets = document.querySelectorAll('.split');
+const galleryImages = document.querySelectorAll('#gallery img');
+gsap.registerPlugin(ScrollTrigger,SplitText);
 
+
+//splittext animations
 targets.forEach(target=>{
 let splitText = new SplitText(target,{type:'words,chars'});
 let chars = splitText.words;
@@ -9,11 +26,12 @@ gsap.from(chars,{
     opacity:0,
     stagger:.1,
     rotate:10,
-    ease:'none',
+    duration:1,
+    ease:'bounce.out',
     scrollTrigger:{
         trigger:target,
         // scrub:true,
-        start:'top bottom',
+        start:'30% 80%',
         end:'top 20%',
         // markers:true
     }
@@ -21,8 +39,7 @@ gsap.from(chars,{
 
 })
 
- gsap.registerPlugin(ScrollTrigger,SplitText);
-
+//card animations
  let tl = gsap.timeline({
   
   scrollTrigger:{
@@ -30,22 +47,22 @@ gsap.from(chars,{
         start:'-150px 50%',
         end: '+=200',
         // scrub:true, 
-        ease:'none',
+        ease:'bounce.out',
         stagger:.2,
         // duration:8,
-        markers:true
+        // markers:true
   }
  })
- cards.forEach(card=>{
-  tl.from(card,{
+//  cards.forEach(card=>{
+  tl.from(cards,{
       
     opacity:0,
     left:'-150px',
-    rotation:80
+    // rotation:80
       
     })
   
- })
+//  })
   
  cards.forEach(card=>{
   card.addEventListener('mouseover',()=>{
@@ -66,6 +83,19 @@ gsap.from(chars,{
   })
  })
 
+
+//gallery animations
+galleryImages.forEach(img=>{
+  gsap.from(img,{
+    scrollTrigger:{
+      trigger:img,
+      start:'-150px 50%',
+      ease:'power1.out',
+      stagger:.4,
+    },
+    opacity:0,
+  })
+})
 // Smooth fade-in animation
 const animatedElements = document.querySelectorAll('.animate');
 

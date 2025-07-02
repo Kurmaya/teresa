@@ -11,15 +11,20 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 </head>
 <body>
-    <nav class="navbar">
-      <div class="logo"><img src="./assets/logo.svg" alt=""></div>
+   <nav class="navbar">
+      <div class="logo"><a href="./index.html"><img src="./assets/logo.svg" alt=""></a></div>
       <ul class="nav-links">
-        <li><a href="#about">About</a></li>
-        <li><a href="#services">Services</a></li>
-        <li><a href="#gallery">Gallery</a></li>
-        <li><a href="#testimonials">Testimonials</a></li>
-        <li><a href="#contact">Contact</a></li>
+        <li><a href="./index.html">Home</a></li>
+        <li><a href="./about.html">About</a></li>
+        <li><a href="./services.html">Services</a></li>
+        <!-- <li><a href="#testimonials">Testimonials</a></li> -->
+        <li><a href="./contact.html">Contact</a></li>
       </ul>
+      <div class="close">
+        <div class="bar"></div>
+        <div class="bar"></div>
+        <div class="bar"></div>
+      </div>
     </nav>
   <section class="hero section">
     
@@ -51,7 +56,7 @@ making.</p>
 open my business O.G. Consulting which stands for the Original
 Ginger 😊</p>
 
-    
+  <a href="./about.html"><button class="btn">Read More</button></a>  
         </div>
     
     </div>
@@ -163,6 +168,16 @@ you with any holiday or special occasion.</p>
       <p id="formMessage"></p>
     </form>
     <div class="policy">
+      <div class="address-phone">
+        <div class="address">
+          <img src="./assets/icons/location-pin.png" alt="">
+          <p>123 , 321 street , USA</p>
+        </div>
+        <div class="phone">
+          <img src="./assets/icons/phone.png" alt="">
+          <p>+1-1234567890</p>  
+        </div>
+      </div>
         <h4>Policies</h4>
         <p>I will travel but the customer will pay for travel and accommodations so
 it will be including in my estimate.</p>
@@ -178,6 +193,7 @@ well.</p>
   </section>
 
   <footer>
+    <div class="logo"><img src="./assets/logo.svg" alt=""></div>
     <p>&copy; <span class="year"></span> The O.G. Consulting</p>
   </footer>
   <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"></script>
@@ -193,14 +209,6 @@ well.</p>
       },
     });
     document.querySelector('.year').textContent = new Date().getFullYear();
-    // Smooth scroll navigation
-    document.querySelectorAll('nav a').forEach(link => {
-      link.addEventListener('click', function (e) {
-        e.preventDefault();
-        const target = document.querySelector(this.getAttribute('href'));
-        if (target) target.scrollIntoView({ behavior: 'smooth' });
-      });
-    });
 
     // Contact form message
     document.getElementById('contactForm').addEventListener('submit', function (e) {
