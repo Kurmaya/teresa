@@ -1,3 +1,4 @@
+
 const cursorBig = document.querySelector('.big');
 
 
@@ -34,12 +35,13 @@ close.addEventListener('click',()=>{
 const cards = document.querySelectorAll('.card');
 const targets = document.querySelectorAll('.split');
 const galleryImages = document.querySelectorAll('#gallery img');
+
 galleryImages.forEach(i=>{
   i.addEventListener('mouseover',x=>{
-cursorBig.querySelector('img').src='../assets/images/g.png';
+cursorBig.querySelector('img').src='./assets/images/g.png';
   })
   i.addEventListener('mouseleave',x=>{
-    cursorBig.querySelector('img').src='../assets/logo.svg';
+    cursorBig.querySelector('img').src='./assets/logo.svg';
   })
 })
 gsap.registerPlugin(ScrollTrigger,SplitText);
@@ -100,6 +102,7 @@ gsap.from(chars,{
       duration:.3,
       ease:'back.out'
     })
+    cursorBig.querySelector('img').src='./assets/images/o.png';
   })
   card.addEventListener('mouseleave',()=>{
     gsap.to(card,{
@@ -108,6 +111,7 @@ gsap.from(chars,{
       duration:.3,
       ease:'back.out'
     })
+    cursorBig.querySelector('img').src='./assets/logo.svg';
   })
  })
 
@@ -125,34 +129,16 @@ galleryImages.forEach(img=>{
   })
 })
 // Smooth fade-in animation
-const animatedElements = document.querySelectorAll('.animate');
+// const animatedElements = document.querySelectorAll('.animate');
 
-const observer = new IntersectionObserver(entries => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      entry.target.classList.add('visible');
-    }
-  });
-}, { threshold: 0.2 });
+// const observer = new IntersectionObserver(entries => {
+//   entries.forEach(entry => {
+//     if (entry.isIntersecting) {
+//       entry.target.classList.add('visible');
+//     }
+//   });
+// }, { threshold: 0.2 });
 
-animatedElements.forEach(el => observer.observe(el));
+// animatedElements.forEach(el => observer.observe(el));
 
-// Contact form message
-document.getElementById("contactForm").addEventListener("submit", function (e) {
-  e.preventDefault();
-  document.getElementById("formMessage").textContent = "Thank you! I'll get back to you soon.";
-  this.reset();
-});
 
-// Lightbox functionality
-document.querySelectorAll('.lightbox').forEach(img => {
-  img.addEventListener('click', () => {
-    const overlay = document.createElement('div');
-    overlay.className = 'lightbox-full';
-    const fullImg = document.createElement('img');
-    fullImg.src = img.src;
-    overlay.appendChild(fullImg);
-    overlay.addEventListener('click', () => overlay.remove());
-    document.body.appendChild(overlay);
-  });
-});

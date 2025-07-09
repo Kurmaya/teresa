@@ -11,6 +11,9 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 </head>
 <body>
+    <div class="big">
+    <img src="./assets/logo.svg" alt="">
+  </div>
     <nav class="navbar">
       <div class="logo"><a href="./index.html"><img src="./assets/logo.svg" alt=""></a></div>
       <ul class="nav-links">
@@ -105,48 +108,6 @@ storage needs.</p>
   <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/SplitText.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
   <script src="./scripts/script.js"></script>
-  <script>
-      var swiper = new Swiper(".mySwiper", {
-      navigation: {
-        nextEl: ".swiper-button-next",
-        prevEl: ".swiper-button-prev",
-      },
-    });
-    document.querySelector('.year').textContent = new Date().getFullYear();
-
-    // Contact form message
-    document.getElementById('contactForm').addEventListener('submit', function (e) {
-      e.preventDefault();
-      document.getElementById('formMessage').textContent = 'Thank you! We’ll get back to you soon.';
-      this.reset();
-    });
-
-    // Lightbox gallery (simple version)
-    document.querySelectorAll('.gallery img').forEach(img => {
-      img.addEventListener('click', () => {
-        const overlay = document.createElement('div');
-        overlay.style.position = 'fixed';
-        overlay.style.top = 0;
-        overlay.style.left = 0;
-        overlay.style.width = '100%';
-        overlay.style.height = '100%';
-        overlay.style.background = 'rgba(0, 0, 0, 0.8)';
-        overlay.style.display = 'flex';
-        overlay.style.alignItems = 'center';
-        overlay.style.justifyContent = 'center';
-        overlay.style.zIndex = 9999;
-
-        const fullImg = document.createElement('img');
-        fullImg.src = img.src;
-        fullImg.style.maxWidth = '90%';
-        fullImg.style.maxHeight = '90%';
-        fullImg.style.borderRadius = '10px';
-
-        overlay.appendChild(fullImg);
-        overlay.addEventListener('click', () => overlay.remove());
-        document.body.appendChild(overlay);
-      });
-    });
-  </script>
+  
 </body>
 </html>
