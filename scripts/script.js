@@ -1,3 +1,23 @@
+const cursorBig = document.querySelector('.big');
+
+
+gsap.set(cursorBig,{xPercent: -50 ,yPercent: -50});
+
+let xTo = gsap.quickTo(cursorBig,"x",{duration:.2,ease:'power3'}),
+yTo = gsap.quickTo(cursorBig,"y",{duration:.2,ease:'power3'});
+
+window.addEventListener('mousemove', (e)=>{
+  if(window.innerWidth>800){
+
+    xTo(e.clientX);
+    yTo(e.clientY);
+  }
+  else{
+    cursorBig.style.display='none';
+  }
+});
+
+
 const navItem= document.querySelectorAll(".nav-links li a");
 for(let i=0;i<navItem.length;i++){
   if(navItem[i].href===location.href){
@@ -14,6 +34,14 @@ close.addEventListener('click',()=>{
 const cards = document.querySelectorAll('.card');
 const targets = document.querySelectorAll('.split');
 const galleryImages = document.querySelectorAll('#gallery img');
+galleryImages.forEach(i=>{
+  i.addEventListener('mouseover',x=>{
+cursorBig.querySelector('img').src='../assets/images/g.png';
+  })
+  i.addEventListener('mouseleave',x=>{
+    cursorBig.querySelector('img').src='../assets/logo.svg';
+  })
+})
 gsap.registerPlugin(ScrollTrigger,SplitText);
 
 
