@@ -107,8 +107,11 @@ a {
   left:0;
   width: 100%;
   z-index: 100;
+  cursor: default;
 }
-
+.whatsapp{
+  width: 180px!important;
+}
 .logo {
     width: 90px;
     height: 90px;
@@ -638,6 +641,7 @@ width: 80%;
   .big{
     display: none;
   }
+
   .nav-links{
     flex-direction: column;
     height: 100vh;
@@ -683,6 +687,7 @@ width: 80%;
   }
   .address-phone{
     bottom:0;
+    flex-direction: column;
   }
   #about img{
     width: 250px;

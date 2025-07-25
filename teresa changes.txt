@@ -1,9 +1,0 @@
-
-1.change hover color to teal;[x]
-2.orange and beige as a pair - purple and teal as a pair;
-3.orangeish(copperish) transparent overlay on the hero section ;[x]
-4.change cursive font [x]
-5.Make testimonials section a carousel [x]
-6.Change services icons;
-
-

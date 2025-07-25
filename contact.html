@@ -33,7 +33,7 @@
  <section id="contact" class="section">
     <h2 class="split">Contact & Booking</h2>
     <div class="contact-wrap">
-<form id="contactForm" method="POST" action="">
+<form id="contactForm" method="POST" action="originalgingerconsulting@gmail.com">
       <input type="text" placeholder="Your Full Name" required>
       <input type="email" placeholder="Your Email" required>
       <input type="text" placeholder="Your Address" required>
@@ -43,15 +43,20 @@
       <p id="formMessage"></p>
     </form>
     <div class="policy">
-      <div class="address-phone">
+    <div class="address-phone">
         <div class="address">
           <img src="./assets/icons/location-pin.png" alt="">
-          <p>123 , 321 street , USA</p>
+          <p>Longview, WA</p>
         </div>
         <div class="phone">
           <img src="./assets/icons/phone.png" alt="">
-          <p>+1-1234567890</p>  
+          
+          <a href="tel:+1509-406-4644">509-406-4644</a>
         </div>
+         
+          <a href="https://wa.me/15094064644"><img class="whatsapp" src="./assets/icons/whatsapp.png" alt=""></a>
+          
+        
       </div>
         <h4>Policies</h4>
         <p>I will travel but the customer will pay for travel and accommodations so
@@ -81,11 +86,11 @@ well.</p>
     document.querySelector('.year').textContent = new Date().getFullYear();
 
     // Contact form message
-    document.getElementById('contactForm').addEventListener('submit', function (e) {
-      e.preventDefault();
-      document.getElementById('formMessage').textContent = 'Thank you! We’ll get back to you soon.';
-      this.reset();
-    });
+    // document.getElementById('contactForm').addEventListener('submit', function (e) {
+    //   e.preventDefault();
+    //   document.getElementById('formMessage').textContent = 'Thank you! We’ll get back to you soon.';
+    //   this.reset();
+    // });
 
   
   </script>
