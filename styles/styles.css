@@ -511,7 +511,7 @@ form {
   position: relative;
   justify-content: space-around;
   align-items: center;
-  bottom:25%;
+  bottom:5%;
   gap:50px;
 }
 .address-phone img{
