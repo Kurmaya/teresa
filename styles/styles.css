@@ -283,7 +283,9 @@ form button{
       object-fit: cover;
     }
     .swiper-button-next,.swiper-button-prev{
-      color:teal!important;
+      color:#D96D2C!important;
+      top:45%!important;
+      cursor: none!important;
     }
 /* Sections */
 .section {
@@ -416,6 +418,10 @@ right:-15px;
 }
 
 /* Gallery */
+#gallery .gallery-wrap img{
+  height: 350px;
+  width: 400px;
+}
 .gallery-wrap{
     display: flex;
     flex-direction: column;
@@ -432,7 +438,7 @@ right:-15px;
 }
 .gallery {
   display: grid;
-  grid-template-columns: repeat(4,1fr);
+  grid-template-columns: repeat(2,1fr);
   gap: 1rem .5rem;
   place-items: center;
   margin:20px auto;
@@ -471,7 +477,7 @@ blockquote {
     margin-bottom: 1.5rem;
     border-radius: 8px;
     font-style: italic;
-    width: 100%;
+    width: 86%;
     margin: auto;
     font-size: 1.2rem;
     
@@ -495,24 +501,24 @@ form {
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
-    gap:10px;
+    gap:5px;
     height: 100%;
     width: 100%;
     margin: auto;
-    top:-10%;
+    top:-18%;
     /* text-align: center; */
 }
 .policy p{
-    font-size: .9rem;
+    font-size: .7rem;
 }
 
 .address-phone{
-  display: flex;
-  position: relative;
-  justify-content: space-around;
-  align-items: center;
-  bottom:5%;
-  gap:50px;
+   display: flex;
+    position: relative;
+    justify-content: space-between;
+    align-items: center;
+    bottom: 5%;
+    gap: 40px;
 }
 .address-phone img{
   width: 50px;
@@ -668,6 +674,9 @@ width: 80%;
     margin:auto;
     position: relative;
   }
+  .section {
+    padding:1rem;
+  }
   .section h2{
     font-size: 3rem;
     text-align: center;
@@ -702,8 +711,9 @@ width: 80%;
     align-items: center;
     grid-template-columns: repeat(2,1fr);
   }
-  .swiper .gallery img{
-    width: 150px;
+#gallery .gallery-wrap img{
+    width: 160px;
+    height: 350px;
   }
   
   .service-hero .service-cards{

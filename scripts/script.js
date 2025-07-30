@@ -35,6 +35,15 @@ close.addEventListener('click',()=>{
 const cards = document.querySelectorAll('.card');
 const targets = document.querySelectorAll('.split');
 const galleryImages = document.querySelectorAll('#gallery img');
+const swiperButtons= ['.mySwiper .swiper-button-prev','.mySwiper .swiper-button-next','.mySwiper2 .swiper-button-prev','.mySwiper2 .swiper-button-next'];
+for(let i=0; i<swiperButtons.length;i++) {
+  document.querySelector(swiperButtons[i]).addEventListener('mouseover',()=>{
+cursorBig.querySelector('img').src='./assets/images/g.png';
+  })
+  document.querySelector(swiperButtons[i]).addEventListener('mouseleave',()=>{
+    cursorBig.querySelector('img').src='./assets/logo.svg';
+  })
+}
 
 galleryImages.forEach(i=>{
   i.addEventListener('mouseover',x=>{
