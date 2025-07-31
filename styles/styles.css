@@ -443,7 +443,9 @@ right:-15px;
   place-items: center;
   margin:20px auto;
   width: 100%;
-
+display: flex;
+justify-content: space-around;
+align-items: center;
 }
 
 
@@ -454,6 +456,8 @@ right:-15px;
   /* cursor: pointer; */
   transition: all 0.3s;
   object-fit: cover;
+  z-index: 1;
+  position: relative;
 }
 
 .gallery img:hover {
@@ -462,11 +466,59 @@ right:-15px;
     url('../assets/images/o.png'),auto; */
     /* cursor: pointer; */
 }
+.overlay:hover >p{
+  opacity: 0;
+}
+.overlay:hover > img{
+  filter:brightness(1);
+}
+.before-hold,.after-hold{
+  position: relative;
+  width: 60%;
+  height: 100%;
+  display: grid;
+  place-items: center;
+  margin: auto;
+}
+.overlay{
+  
+  position: relative;
+  width: 78%;
+  height: 100%;
+  /* background-color: #333; */
+  left:0;
+  /* opacity: 0.2; */
+  z-index: 2;
+  border-radius: 10px;
+  margin: auto;
+  display: grid;
+  place-items: center;
+  
+}
+
+.overlay img{
+  filter:brightness(.5);
+}
+.overlay p{
+ position: absolute; 
+ top:50%;
+ left:50%;
+ transform: translate(-50%,-50%);
+ z-index: 2;
+ color:white;
+ opacity: 1;
+ font-size: 1.5rem;
+ text-transform: uppercase;
+ /* width: 50%; */
+}
 
 /* Testimonials */
 #testimonials .gallery{
     grid-template-columns: repeat(2,1fr);
     width: 60%;
+}
+#testimonials .gallery-wrap{
+  margin-top:10%;
 }
 blockquote {
   background: #ffe3ed;
